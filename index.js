@@ -64,6 +64,7 @@ app.post("/aristrocatize", async (req, res) => {
 
   const lyrics = await getLyrics(`${artist} ${songTitle}`);
   const aristocratized = await aristocratize(lyrics);
+  console.log(aristocratized)
   
   res.send({result: aristocratized});
 });
